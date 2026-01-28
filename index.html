@@ -1,49 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0 (1)/css/mdb.min.css">
-
-
-
+    <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0/css/mdb.min.css">
 </head>
-
+<style>
+  input{
+    border: 1px solid;
+  }
+</style>
 <body>
-    <div id="nav-container"></div>
-    <h1>HOME PAGE</h1>
-    <div id="footer-container"></div>
+    
+<h1 class="text-center display-5 fw-bold m-5">LOGIN FORM</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+        <form>
+  <!-- Email input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="email" id="form2Example1" class="form-control" />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+      <!-- Checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+        <label class="form-check-label" for="form2Example34"> Remember me </label>
+      </div>
+    </div>
+
+    <div class="col">
+      <!-- Simple link -->
+      <a href="#!">Forgot password?</a>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Not a member? <a href="#!">Register</a></p>
+    <p>or sign up with:</p>
+    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+
+    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-google"></i>
+    </button>
+
+    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-twitter"></i>
+    </button>
+
+    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-github"></i>
+    </button>
+  </div>
+</form>
+        </div>
+    </div>
+</div>
 
 
-    <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0 (1)/js/mdb.umd.min.js">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-
-        $(document).ready(() => {
-
-            $.get('nav.html', (data) => {
-                console.log()
-                $('#nav-container').html(data)
-            })
-
-            $.get('footer.html', (data) => {
-                $('#footer-container').html(data)
-            })
-
-
-
-        })
 
 
 
 
-    </script>
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0/js/mdb.umd.min.js">
 
 
 </body>
-
 </html>
