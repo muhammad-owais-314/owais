@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+      <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *::before,::after{
+            padding: 0px;
+            margin: 0px;
+        }
+        /* body{
+              background-color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            color: rgb(0, 0, 0);
+        } */
+        h1{
+            font-size: 80px !important;
+            font-style: normal;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #input,#pass{
+            width: 600px;
+            height: 50px;
+            position: relative;
+        }
+        #eye{
+            position: absolute;
+            top: 344px;
+            left: 850px;
+            color: black;
+            height: 50px;
+            width: 50px;
+        }
+        .oow{
+            height: 200px;
+            width: 200px;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+  
+
+
+<div class="container flex-wrap fluid">
+<h1 class="fw-bold display-6 ms-1 py-5 text-center">Instagram</h1>
+<form>
+    
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input id="input" type="text" class="form-control fluid flex-wrap" placeholder="Enter username">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input id="pass" type="password" class="form-control" placeholder="Enter password">
+      <span id="eye"><i class="fa-solid fa-eye"></i></span>
+    </div>
+
+  </form>
+</div>
+
+
+<button id="btn" class="btn btn-primary mx-5">button</button>
+
+<br><br><br>
+<!-- ------------------------------------------------------------------------------ -->
+                          <!-- Product list -->
+<!-- ------------------------------------------------------------------------------ -->
+
+
+
+
+
+<div class="container">
+  <div class="row" id="cardcontainer">
+   
+</div>
+    </div>
+
+  </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(() =>{
+
+        $("#eye").click(() =>{
+            if($("#pass").attr('type') == 'password'){
+                $("#pass").attr('type', 'text')
+                $("#eye").html('<i class="fa-solid fa-eye"></i>')
+            }
+            else if($("#pass").attr("type") == 'text'){
+                $("#pass").attr('type', 'password')
+                $("#eye").html('<i class="fa-solid fa-eye-slash"></i>')
+            }
+        })
+
+
+      $('#input,#pass').on('keyup',() =>{
+        console.log($('#input,#pass').val())
+      if($('#input,#pass').val() != ''){
+        $('#btn').removeAttr('disable')
+      }
+    else if($('#input,#pass').val() == ''){
+      $("btn").attr("disable","disable")
+    }
+
+
+
+
+      })
+
+  
+
+
+//<!-- ------------------------------------------------------------------------------ -->
+  //                        <!-- Product list -->
+//<!-- ------------------------------------------------------------------------------ -->
+
+let a =['mudasir','taha', 'tom', 'jerry']
+console.log(a)
+
+const products = [
+    {
+      productName: "Wireless Bluetooth Headphones",
+      productPrice: 19.99,
+      productDescription: "Experience crystal clear sound with these wireless Bluetooth headphones, perfect for everyday use.",
+      productImage: "1.jpg"
+    },
+    {
+      productName: "Smartphone Stand",
+      productPrice: 29.99,
+      productDescription: "A sleek and adjustable smartphone stand, ideal for hands-free video calls and watching content.",
+      productImage: "2.jpg"
+    },
+    {
+      productName: "Portable Power Bank",
+      productPrice: 39.99,
+      productDescription: "Stay charged on the go with this compact and powerful portable power bank.",
+      productImage: "3.jpg"
+    },
+    {
+      productName: "Smartwatch Fitness Tracker",
+      productPrice: 49.99,
+      productDescription: "Track your fitness goals and stay connected with this stylish smartwatch fitness tracker.",
+      productImage: "4.jpg"
+    },
+    {
+      productName: "Laptop Sleeve",
+      productPrice: 59.99,
+      productDescription: "Protect your laptop in style with this durable and fashionable laptop sleeve.",
+      productImage: "5.jpg"
+    },
+    {
+      productName: "Noise-Cancelling Earbuds",
+      productPrice: 69.99,
+      productDescription: "Enjoy immersive sound and block out the noise with these advanced noise-cancelling earbuds.",
+      productImage: "6.jpg"
+    },
+    {
+      productName: "Wireless Charging Pad",
+      productPrice: 79.99,
+      productDescription: "Charge your devices wirelessly and effortlessly with this sleek charging pad.",
+      productImage: "7.jpg"
+    },
+    {
+      productName: "LED Desk Lamp",
+      productPrice: 89.99,
+      productDescription: "Illuminate your workspace with this adjustable and energy-efficient LED desk lamp.",
+      productImage: "8.jpg"
+    },
+    {
+      productName: "Bluetooth Speaker",
+      productPrice: 99.99,
+      productDescription: "Enjoy high-quality sound wherever you go with this portable Bluetooth speaker.",
+      productImage: "9.jpg"
+    },
+    {
+      productName: "Smart Home Security Camera",
+      productPrice: 109.99,
+      productDescription: "Keep your home safe and secure with this smart home security camera, featuring motion detection and night vision.",
+      productImage: "10.jpg"
+    }
+  ];
+
+products.map((el) =>{
+    document.getElementById("cardcontainer").innerHTML +=
+` <div class="col-4">
+    <div class="card" style="width: 18rem;">
+  <img src="images/${el.productImage}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${el.productName}</h5>
+    <p class="card-text">${el.productDescription}</p>
+    <p class="card-text">${el.productPrice}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>`
+})
+
+  })
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js" integrity="sha512-nKXmKvJyiGQy343jatQlzDprflyB5c+tKCzGP3Uq67v+lmzfnZUi/ZT+fc6ITZfSC5HhaBKUIvr/nTLCV+7F+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
